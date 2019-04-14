@@ -10,5 +10,12 @@ highlighted a bit of the background and live coded some examples.
 * [Slides.pdf](Slides.pdf) ([markdown](Slides.md)) &mdash; jump to [Resources](https://github.com/miku/gomodintro/blob/master/Slides.md#resources)
 * All [go and versioning papers](https://research.swtch.com/vgo) (as of April 2019) in a single PDF: [vgo-all.pdf](vgo-all.pdf)
 
+If there is only a single thing to remember, then maybe this would be it:
+
+> Import Compatibility Rule: If an old package and a new package have the same
+import path, the new package must be backwards compatible with the old package.
+
+----
+
 Interested in the Go programming language and cloud native topics? Visit us at
 [golangleipzig.space](https://golangleipzig.space/).
