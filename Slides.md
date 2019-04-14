@@ -427,3 +427,13 @@ replace "bad/thing" v1.4.5 => "good/thing" v1.4.5
 
 # Demo
 
+----
+
+# Resources
+
+* [Quick start](https://github.com/golang/go/wiki/Modules#quick-start)
+* Go tool docs: [Module maintenance](https://golang.org/cmd/go/#hdr-Module_maintenance), [Download modules to local cache](https://golang.org/cmd/go/#hdr-Download_modules_to_local_cache), [Edit go.mod from tools or scripts](https://golang.org/cmd/go/#hdr-Edit_go_mod_from_tools_or_scripts), ...
+* [Go modules design documents](https://research.swtch.com/vgo)
+* GopherCon SG 2018: [Go with Versions](https://www.youtube.com/watch?v=F8nrpe0XWRg)
+* Blog: [Go Modules in 2019](https://blog.golang.org/modules2019), [Using Go Modules](https://blog.golang.org/using-go-modules)
+* justforfunc: [#42](https://www.youtube.com/watch?v=aeF3l-zmPsY), [#43](https://www.youtube.com/watch?v=H_4eRD8aegk)
