@@ -50,7 +50,7 @@ Go and versioning series from Russ Cox:
 
 ----
 
-# A few highlights (part 1)
+# A few highlights &mdash; part 1
 
 > Although we must add versioning, we also must not remove the best parts of the current go command: its simplicity, speed, and understandability. Today, many programmers mostly don't pay attention to versioning, and everything mostly works fine.
 
@@ -102,7 +102,7 @@ Also: [GOVENDOREXPERIMENT](https://go.googlesource.com/proposal/+/master/design/
 
 ----
 
-# A few highlights (6) (part 2)
+# A few highlights (6) &mdash; part 2
 
 > For me, design means building, tearing down, and building again, over and over. 
 
@@ -114,7 +114,7 @@ Example of vgo usage.
 
 ----
 
-# A few highlights (7) (part 3)
+# A few highlights (7) &mdash; part 3
 
 > A year ago, I believed that putting **versions in import paths** like this was **ugly**, undesirable, and probably avoidable. But over the past year, I've come to understand just how much **clarity and simplicity** they bring to the system.
 
@@ -204,7 +204,7 @@ More work for library authors.
 
 ----
 
-# On minimum version selection (MVS) (part 4)
+# On minimum version selection (MVS) &mdash; part 4
 
 * https://research.swtch.com/vgo-mvs
 
@@ -276,7 +276,7 @@ Theory plus some helpers for the real world.
 
 ----
 
-# Reproducible builds (part 5)
+# Reproducible builds -- &mdash; part 5
 
 * https://research.swtch.com/vgo-repro (Part 5)
 
@@ -324,7 +324,7 @@ Was called `go.modverify`, now `go.sum`.
 
 ----
 
-# Defining Go modules (part 6)
+# Defining Go modules &mdash; part 6
 
 * https://research.swtch.com/vgo-module
 
@@ -400,7 +400,7 @@ replace "bad/thing" v1.4.5 => "good/thing" v1.4.5
 
 ----
 
-# Versioned Go commands (part 7)
+# Versioned Go commands &mdash; part 7
 
 * https://research.swtch.com/vgo-cmd
 
