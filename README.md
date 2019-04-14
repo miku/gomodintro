@@ -2,7 +2,7 @@
 
 Go modules are in experimental phase since [Go
 1.11](https://golang.org/doc/go1.11#modules) (August 2018). There is a long
-history, quite some theory and some tooling changes related to versioning and
+history, quite some theory and a few tooling changes related to versioning and
 dependency management in Go. At [Golang and Cloud Native Meetup Leipzig
 #3](https://www.meetup.com/Leipzig-Golang-and-Cloud/events/260338152/)
 highlighted a bit of the background and live coded some examples.
