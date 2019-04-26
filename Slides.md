@@ -27,7 +27,7 @@ Many project (at least 15) developed over time.
 
 # Official proposal
 
-> The official Go proposal is at https://golang.org/issue/24301, filed on March 20, 2018 and accepted on May 21, 2018. 
+> The official Go proposal is at https://golang.org/issue/24301, filed on March 20, 2018 and accepted on May 21, 2018.
 
 ----
 
@@ -60,7 +60,7 @@ https://research.swtch.com/vgo-intro
 
 # A few highlights (2)
 
-> This proposal keeps the best parts of go get, adds reproducible builds, adopts semantic versioning, eliminates vendoring, deprecates GOPATH in favor of a project-based workflow, and provides for a smooth migration from dep and its predecessors. 
+> This proposal keeps the best parts of go get, adds reproducible builds, adopts semantic versioning, eliminates vendoring, deprecates GOPATH in favor of a project-based workflow, and provides for a smooth migration from dep and its predecessors.
 
 
 ----
@@ -73,7 +73,7 @@ https://research.swtch.com/vgo-intro
 
 # A few highlights (4)
 
-> If you're using an externally supplied package and worry that it might change in unexpected ways, the simplest solution is to copy it to your local repository. (This is the approach Google takes internally.) 
+> If you're using an externally supplied package and worry that it might change in unexpected ways, the simplest solution is to copy it to your local repository. (This is the approach Google takes internally.)
 
 ----
 
@@ -104,7 +104,7 @@ Also: [GOVENDOREXPERIMENT](https://go.googlesource.com/proposal/+/master/design/
 
 # A few highlights (6) &mdash; part 2
 
-> For me, design means building, tearing down, and building again, over and over. 
+> For me, design means building, tearing down, and building again, over and over.
 
 https://research.swtch.com/vgo-tour
 
@@ -128,13 +128,13 @@ The *import compatibility rule*:
 
 > If an old package and a new package have the same import path, the new package **must be backwards compatible** with the old package.
 
-The import compatibility rule dramatically simplifies the experience of using incompatible versions of a package. When each different version has a different import path, there is no ambiguity about the intended semantics of a given import statement. This makes it easier for both developers and tools to understand Go programs. 
+The import compatibility rule dramatically simplifies the experience of using incompatible versions of a package. When each different version has a different import path, there is no ambiguity about the intended semantics of a given import statement. This makes it easier for both developers and tools to understand Go programs.
 
 ----
 
 # A few highlights (9)
 
-> The problem here is that the **semver spec** is really not much more than a way to choose and compare version strings. It says nothing else. 
+> The problem here is that the **semver spec** is really not much more than a way to choose and compare version strings. It says nothing else.
 
 > The most valuable part of semver is the encouragement to make backwards-compatible changes when possible.
 
@@ -146,7 +146,7 @@ Ok, we use a new name, but which?
 
 > But choosing a new name at every backwards-incompatible change is difficult and unhelpful to users.
 
-> We can use semantic versioning and follow the import compatibility rule by including the major version in the import path. Instead of needing to invent a cute but unrelated new name like Pocoauth, Alice can call her new API OAuth2 2.0.0, with the new import path "oauth2/v2". 
+> We can use semantic versioning and follow the import compatibility rule by including the major version in the import path. Instead of needing to invent a cute but unrelated new name like Pocoauth, Alice can call her new API OAuth2 2.0.0, with the new import path "oauth2/v2".
 
 ----
 
@@ -154,7 +154,7 @@ Ok, we use a new name, but which?
 
 Hello, Plan 9.
 
-> Twenty years ago, Rob Pike and I were modifying the internals of a Plan 9 C library, and Rob taught me the rule of thumb that when you **change a function’s behavior**, you also **change its name**. 
+> Twenty years ago, Rob Pike and I were modifying the internals of a Plan 9 C library, and Rob taught me the rule of thumb that when you **change a function’s behavior**, you also **change its name**.
 
 ----
 
@@ -186,7 +186,7 @@ Gradual code repair.
 
 Automatic API updates via `go fix`.
 
-> To be clear, this is not implemented today, but it seems promising, and this kind of tooling is made possible by giving different things different names. These examples demonstrate the power of having durable, immutable names attached to specific code behavior. 
+> To be clear, this is not implemented today, but it seems promising, and this kind of tooling is made possible by giving different things different names. These examples demonstrate the power of having durable, immutable names attached to specific code behavior.
 
 ----
 
@@ -194,13 +194,13 @@ Automatic API updates via `go fix`.
 
 More work for library authors.
 
-> Semantic import versioning is more work for authors of packages. They can't just decide to issue v2, walk away from v1, and leave users [like Ugo] to deal with the fallout. 
+> Semantic import versioning is more work for authors of packages. They can't just decide to issue v2, walk away from v1, and leave users [like Ugo] to deal with the fallout.
 
 ----
 
 # A few highlights (17)
 
-> Let's commit to compatibility. 
+> Let's commit to compatibility.
 
 ----
 
@@ -210,7 +210,7 @@ More work for library authors.
 
 > A versioned Go command must decide which module versions to use in each build. I call this list of modules and versions for use in a given build the **build list**.
 
-> For stable development, today's build list must also be tomorrow's build list. But then developers must also be allowed to change the build list: to upgrade all modules, to upgrade one module, or to downgrade one module. 
+> For stable development, today's build list must also be tomorrow's build list. But then developers must also be allowed to change the build list: to upgrade all modules, to upgrade one module, or to downgrade one module.
 
 ----
 
@@ -226,13 +226,13 @@ More work for library authors.
 
 > Minimal version selection assumes that each module declares its own dependency requirements: a list of minimum versions of other modules.
 
-> Modules are assumed to follow the import compatibility rule—packages in any newer version should work as well as older ones—so a dependency requirement gives only a minimum version, never a maximum version or a list of incompatible later versions. 
+> Modules are assumed to follow the import compatibility rule—packages in any newer version should work as well as older ones—so a dependency requirement gives only a minimum version, never a maximum version or a list of incompatible later versions.
 
 ----
 
 # Current behaviour
 
-> Go's current version selection algorithm is simplistic, providing two different version selection algorithms, neither of which is right. 
+> Go's current version selection algorithm is simplistic, providing two different version selection algorithms, neither of which is right.
 
 * The first algorithm is the default behavior of go get: if you have a local version, use that one, or else download and use the latest version.
 
@@ -255,7 +255,7 @@ Details at:
 
 # In one sentence
 
-> In contrast, minimal version selection prefers the minimum allowed version, which is the exact version requested by some go.mod in the project. 
+> In contrast, minimal version selection prefers the minimum allowed version, which is the exact version requested by some go.mod in the project.
 
 ----
 
@@ -272,11 +272,11 @@ Theory plus some helpers for the real world.
 
 > In contrast, most other systems, including Cargo and Dep, use the newest version available that meets requirements listed in a “manifest file.” The release of a new version changes their build decisions. To get reproducible builds, these systems add a second mechanism, the “lock file,” which lists the specific versions a build should use.
 
-> I realized that both manifest and lock exist for the same purpose: to work around the “upgrade everything to latest” default behavior. 
+> I realized that both manifest and lock exist for the same purpose: to work around the “upgrade everything to latest” default behavior.
 
 ----
 
-# Reproducible builds -- &mdash; part 5
+# Reproducible builds &mdash; part 5
 
 * https://research.swtch.com/vgo-repro (Part 5)
 
@@ -284,7 +284,7 @@ Theory plus some helpers for the real world.
 
 There is a movement around this, too, e.g. in Debian.
 
->  A **verifiable build** is one that records enough information to be precise about exactly how to repeat it. 
+>  A **verifiable build** is one that records enough information to be precise about exactly how to repeat it.
 >  A **verified build** is one that checks that it is using the expected source code.
 
 ----
@@ -299,7 +299,7 @@ How would you find out the version used to build a Go binary?
     /usr/bin/containerd-shim go1.12.1
     /usr/bin/yay go1.11.5
     /usr/bin/gofmt go1.12.3
-    
+
 ----
 
 # goversion tool  and library versions
@@ -331,8 +331,8 @@ Was called `go.modverify`, now `go.sum`.
 > A Go module is a **collection of packages versioned as a unit**, along with a **go.mod** file listing other required modules.
 
 
-> The move to modules is an opportunity for us to revisit and fix many details of how the go command manages source code. The current go get model will be about ten years old when we retire it in favor of modules. We need to make sure that the module design will serve us well for the next decade. 
- 
+> The move to modules is an opportunity for us to revisit and fix many details of how the go command manages source code. The current go get model will be about ten years old when we retire it in favor of modules. We need to make sure that the module design will serve us well for the next decade.
+
 ----
 
 # Use tags
@@ -350,7 +350,7 @@ Was called `go.modverify`, now `go.sum`.
 
 # Community proxy
 
-> We want to make it possible, at some future point, to introduce a shared proxy for use by the Go community, similar in spirit to those used by Rust, Node, and other languages. At the same time, the design must work well without assuming such a proxy or registry. 
+> We want to make it possible, at some future point, to introduce a shared proxy for use by the Go community, similar in spirit to those used by Rust, Node, and other languages. At the same time, the design must work well without assuming such a proxy or registry.
 
 ----
 
@@ -389,14 +389,14 @@ replace "bad/thing" v1.4.5 => "good/thing" v1.4.5
 
 # Why not X?
 
-> My goals for the file format were that it be (1) clear and simple, (2) easy for people to read, edit, manipulate, and diff, (3) easy for programs like vgo to read, modify, and write back, preserving comments and general structure, and (4) have room for limited future growth. I looked at JSON, TOML, XML, and YAML but none of them seemed to have those four properties all at once. 
-> 
+> My goals for the file format were that it be (1) clear and simple, (2) easy for people to read, edit, manipulate, and diff, (3) easy for programs like vgo to read, modify, and write back, preserving comments and general structure, and (4) have room for limited future growth. I looked at JSON, TOML, XML, and YAML but none of them seemed to have those four properties all at once.
+>
 
 ----
 
 # Tag requirements
 
-> The leading v is required, and having three numbers is also required. 
+> The leading v is required, and having three numbers is also required.
 
 ----
 
@@ -404,16 +404,16 @@ replace "bad/thing" v1.4.5 => "good/thing" v1.4.5
 
 * https://research.swtch.com/vgo-cmd
 
-> All commands (go build, go run, and so on) will download imported source code automatically, if the necessary version is not already present in the download cache on the local system. 
+> All commands (go build, go run, and so on) will download imported source code automatically, if the necessary version is not already present in the download cache on the local system.
 
 ----
 
 # Versioned Go commands
 
 
-> The go list command will add access to module information. 
+> The go list command will add access to module information.
 
-> The all pattern is redefined to make sense in the world of modules. 
+> The all pattern is redefined to make sense in the world of modules.
 
 > Developers can and will be encouraged to work in directories outside the GOPATH tree.
 
@@ -421,7 +421,7 @@ replace "bad/thing" v1.4.5 => "good/thing" v1.4.5
 
 # Automatic downloads
 
-> The most significant implication of the isolation rule is that commands like go build, go install, and go test should download versioned dependencies as needed (that is, if not already downloaded and cached). 
+> The most significant implication of the isolation rule is that commands like go build, go install, and go test should download versioned dependencies as needed (that is, if not already downloaded and cached).
 
 ----
 
